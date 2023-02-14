@@ -1,0 +1,32 @@
+Refactor:
+const filterOutOdds = (...args) => args.filter(num => num % 2 === 0);
+
+findMin:
+const findMin = (...nums) => nums.reduce((min, n) => n < min ? n : min);
+
+mergeObjects:
+const mergeObjects = (objFirst, objSecond) => ({...objFirst, ...objSecond});
+
+doubleAndReturnArgs:
+const doubleAndReturnArgs = (arr, ...rest) => [...arr, ...rest.map(num => num * 2)];
+
+Slice and Dice!:
+const removeRandom = items => {
+    const newArr = [...items];
+    newArr.splice(Math.round(Math.random()*items.length), 1);
+    return newArr;
+};
+
+const extend = (array1, array2) => [...array1, ...array2];
+
+const addKeyVal = (obj, key, val) => ({...obj, [key]:val});
+
+const removeKey = (obj, key) => {
+    const newObj = {...obj};
+    delete newObj[key];
+    return newObj;
+};
+
+const combine = (obj1, obj2) => ({...obj1, ...obj2});
+
+const update = (obj, key, val) => ({...obj, [key]:val});
